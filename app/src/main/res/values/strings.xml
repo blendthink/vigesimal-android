@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Vigesimal-Android</string>
+    <string name="convert_button_text">CONVERT</string>
+    <string name="input_hint">Enter vigesimal</string>
 </resources>
