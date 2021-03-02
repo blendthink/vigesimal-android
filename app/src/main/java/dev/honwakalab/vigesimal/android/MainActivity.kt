@@ -2,15 +2,18 @@ package dev.honwakalab.vigesimal.android
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import dev.honwakalab.vigesimal.android.databinding.ActivityMainBinding
 import dev.honwakalab.vigesimal.lib.shared.VigesimalConverter
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+
+        val binding = ActivityMainBinding.inflate(layoutInflater)
 
         val decimal = VigesimalConverter.toDecimal("ja")
-        Log.d("blendthink", decimal.toPlainString())
+        binding.result.text = decimal.toPlainString()
+
+        setContentView(binding.root)
     }
 }
