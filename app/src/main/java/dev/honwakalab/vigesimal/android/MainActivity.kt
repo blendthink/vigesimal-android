@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
                 val decimal = VigesimalConverter.toDecimal(inputText)
                 binding.result.text = decimal.toPlainString()
             } catch (e: IllegalArgumentException) {
+                binding.result.text = null
                 Snackbar.make(
                         binding.root,
                         R.string.snackbar_text_failed_convert,
